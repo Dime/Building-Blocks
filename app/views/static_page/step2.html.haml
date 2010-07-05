@@ -1,39 +1,55 @@
-#step2
-  = render :partial => 'shared/steps'
-  #main
-    %h2 Your sponsorships
-    %p Child sponsorship is only €30 a month. That's about €1 a day to change a life.
-    
-    %ul
-      %li#image 
-        = image_tag "kid.png", :alt => "Child"
-      %li 
-        %h2 Akash
-        %h4 child sponsorship
-      %li
-        %input{:type=>"radio"}
-        %label €30 monthly
-        %br
-        %input{:type=>"radio"}
-        %label €90 quarterly
-        %br
-        %input{:type=>"radio"}
-        %label €180 half-yearly
-        %br
-        %input{:type=>"radio"}
-        %label €360 yearly
-        
+#full-profile
   #sidebar
-    .container
-      %h2 Other sponsorships
-      %p Manage your sponsorships
-  
-  .full
-    .third.alpha
-      %h6 Benefits of sponsorship
+    = image_tag("image2.jpg", :alt => "Featured child")
+    %ul
+      %li.left
+        %a View photos
+      %li.right
+        %a View videos
+    %p Dear Frank,
+    %p Your €30 monthly sponsorship of Akash Gurav benefits his entire community. Thank you for being a part of it!
 
-    .third
-      %h6 Sponsor for a year & receive regular updates
-
-    .third.omega
-      %h6 Testimonial
+  #main
+    %h4 Akash Gustav
+    #tabs
+      %ul 
+        %li#active
+          %a Info
+        %li
+          %a Photos
+        %li
+          %a Videos
+        
+    #info.tab
+      .section
+        %h6 Basic information
+        %ul
+          %li Gender: Boy
+          %li Birthday: 15.07.2006
+          %li Age: 3
+          %li Location: Bangalore
+          %li School: BlueBells
+          %li Likes: Cricket, soccer
+          %li Family religion: Hindu
+      
+      .section  
+        %h6 Biography
+        %p Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Cum quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet tellus vivamus, dictum adipiscing convallis magna id. Viverra eu amet sit, dignissim tincidunt volutpat nulla tincidunt, feugiat est.
+      
+      .section
+        %a.right view more photos
+        %h6 Photo album
+        
+        %ul.gallery
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+      
+      .section
+        %a.right view more videos
+        %h6 Featured video
+        
+      
