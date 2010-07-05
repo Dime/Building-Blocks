@@ -1,14 +1,23 @@
 RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
 require File.join(File.dirname(__FILE__), 'boot')
-require 'yaml'
 
-config_file_path = File.join(RAILS_ROOT, *%w(config settings.yml))
+require 'yaml'
+require 'erb'
+
+config_file_path = File.join(RAILS_ROOT, *%w(config settings.secret.yml))
+config_file_path = File.join(RAILS_ROOT, *%w(config settings.yml)) if ['production', 'staging'].include?(RAILS_ENV)
+
 if File.exist?(config_file_path)
-  config = YAML.load_file(config_file_path)
-  APP_CONFIG = config.has_key?(RAILS_ENV) ? config[RAILS_ENV] : {}
+  config = YAML.load(ERB.new(File.read(config_file_path)).result)
+  if config && config.has_key?(RAILS_ENV)
+    APP_CONFIG = config.has_key?(RAILS_ENV) ? config[RAILS_ENV] : {}
+  else
+    puts "ERROR: config file #{config_file_path} is not valid"
+    APP_CONFIG = {}
+  end
 else
-  puts "WARNING: configuration file #{config_file_path} not found."
+  puts "ERROR: configuration file #{config_file_path} not found."
   APP_CONFIG = {}
 end
 
@@ -23,13 +32,16 @@ Rails::Initializer.run do |config|
   config.gem 'paperclip'
   config.gem "rcov"
   config.gem 'google_analytics', :lib => 'rubaidh/google_analytics'
-  #config.gem 'heroku_san'
   #config.gem 'rakeist'
 
   # inherited resources for Rails 2.3
   config.gem 'dry_scaffold', :lib => false
   config.gem 'responders', :version => '= 0.4.5'
   config.gem 'inherited_resources', :version => '=1.0.6'
+  config.gem 'hoptoad_notifier'
+
+  config.gem "factory_girl",     :lib => false, :version => '= 1.2.4'
+  config.gem 'faker',            :lib => false
 
   config.time_zone = 'UTC'
 

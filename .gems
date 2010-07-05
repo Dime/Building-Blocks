@@ -1,0 +1,16 @@
+rails --version 2.3.8
+sqlite3-ruby
+haml --version "= 3.0.12"
+compass --version "= 0.10.2"
+compass-960-plugin --version "= 0.9.13"
+will_paginate
+formtastic
+aasm
+paperclip
+rcov
+google_analytics
+dry_scaffold
+responders --version "= 0.4.5"
+inherited_resources --version "= 1.0.6"
+factory_girl --version "= 1.2.4"
+faker
