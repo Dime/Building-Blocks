@@ -1,0 +1,32 @@
+#full-profile
+  #sidebar
+    = image_tag("image2.png", :alt => "Featured child")
+    %ul
+      %li.left
+        %a View photos
+      %li.right
+        %a View videos
+    %p Dear Frank,
+    %p Your €30 monthly sponsorship of Akash Gurav benefits his entire community. Thank you for being a part of it!
+
+  #main
+    %h4 Akash Gustav
+    #tabs
+      %ul 
+        %li
+          = link_to "Info", static_page_path('child_profile')
+        %li
+          = link_to "Images", static_page_path('child_profile_gallery')
+        %li#active
+          = link_to "Videos", static_page_path('child_profile_videos')
+        
+    #videos.tab
+      
+      .section
+        %a.right view more videos on youtube
+        %h6 Featured video
+        <object width="580" height="460"><param name="movie" value="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="580" height="460"></embed></object>
+        <object width="580" height="460"><param name="movie" value="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="580" height="460"></embed></object>
+        <object width="580" height="460"><param name="movie" value="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="580" height="460"></embed></object>
+        
+      

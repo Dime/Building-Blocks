@@ -1,10 +1,10 @@
 #full-profile
   
   #sidebar
-    background= image_url("bg-profile.png") "no-repeat"
+    background= image_url("bg-thumb2.png") "no-repeat"
     margin-top: 20px
     img
-      padding: 21px 23px
+      padding: 27px 27px
     ul
       margin: 20px 50px 30px 0
       float: left
@@ -21,6 +21,7 @@
     p
       margin-left: 10px
       padding: 0 40px 5px 0
+      font-family: Palatino, Georgia, "Times New Roman", Times, serif
 
   #main
     padding-top: 50px
@@ -60,7 +61,15 @@
         
     #info
       float: left
+    #gallery
+      ul
+        margin-bottom: 20px
+    #videos
+      object
+        margin-bottom: 30px
+        float: left
     .section
+      float: left
       margin: 30px 20px 20px 20px
       padding-bottom: 10px
       border-bottom: 1px solid #ededed
@@ -75,13 +84,23 @@
         margin-bottom: 10px
       ul
         list-style-type: none
+        float: left
+        color: #555
         li
           margin: 0
+      dl.basic
+        width: 280px
+        float: left
+        margin: 10px 0
+        dt
+          float: left
+          padding-right: 5px
+          color: #888
       .gallery
         +horizontal-list
         li
-          padding-right: 7px
+          padding-right: 3px
         img
           border: 4px #eee solid
           &:hover
-            border: 4px #999 solid
+            border: 4px #ddd solid

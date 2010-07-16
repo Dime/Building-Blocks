@@ -1,0 +1,47 @@
+#full-profile
+  #sidebar
+    = image_tag("image2.png", :alt => "Featured child")
+    %ul
+      %li.left
+        %a View photos
+      %li.right
+        %a View videos
+    %p Dear Frank,
+    %p Your €30 monthly sponsorship of Akash Gurav benefits his entire community. Thank you for being a part of it!
+
+  #main
+    %h4 Akash Gustav
+    #tabs
+      %ul 
+        %li
+          = link_to "Info", static_page_path('child_profile')
+        %li#active
+          = link_to "Images", static_page_path('child_profile_gallery')
+        %li
+          = link_to "Videos", static_page_path('child_profile_videos')
+        
+    #gallery.tab
+      .section
+        %a.right view more images on picasa 
+        %h6 Photo album
+        
+        %ul.gallery
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          
+        %ul.gallery
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          
+        %ul.gallery
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")
+          %li= image_tag("image3.jpg", :alt => "Featured child")

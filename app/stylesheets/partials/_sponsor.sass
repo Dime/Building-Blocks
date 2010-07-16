@@ -19,13 +19,14 @@
 #step1
           
   #main
-    background= image_url("child.png") "no-repeat left top"
+    background= image_url("bg-thumb.png") "no-repeat left top"
+    margin-top: 5px
     img
-      padding: 35px 29px
+      padding: 36px 23px
       float: left
       
     dl
-      margin-top: 15px
+      margin: 10px 0
       dt
         float: left
         padding-right: 5px
@@ -51,11 +52,11 @@
     background= image_url("divider.png") "no-repeat top"
       
   #sidebar
+    margin-bottom: 20px
     .form1
       background= image_url("form1.png") "no-repeat top center"
       +rounded
       height: 78px
-      margin-bottom: 10px
       padding: 50px 0 0 10px
 
       h6
@@ -135,7 +136,7 @@
   #main
     margin-bottom: 30px
     .text
-      margin: 75px 0 0 300px
+      margin: 60px 0 0 300px
       .short
         padding: 10px 0
         width: 150px
@@ -203,9 +204,9 @@
                 color= !blue
                 background: #dedede
         &.first
-          background= image_url("child2.png") "no-repeat" 
+          background= image_url("bg-thumb1.png") "no-repeat" 
           margin-top: 20px
-          padding: 28px 0 10px 22px
+          padding: 28px 0 10px 19px
           border: none
           img
             padding-right: 10px
@@ -225,7 +226,7 @@
               clear: both
           .actions
             float: right
-            padding: 40px 0 0 40px
+            padding: 0px 0 0 15px
 
     .total
       background= image_url("divider.png") "no-repeat top"

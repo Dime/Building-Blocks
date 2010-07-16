@@ -1,6 +1,6 @@
 #full-profile
   #sidebar
-    = image_tag("image2.jpg", :alt => "Featured child")
+    = image_tag("image2.png", :alt => "Featured child")
     %ul
       %li.left
         %a View photos
@@ -14,23 +14,31 @@
     #tabs
       %ul 
         %li#active
-          %a Info
+          = link_to "Info", static_page_path('child_profile')
         %li
-          %a Photos
+          = link_to "Images", static_page_path('child_profile_gallery')
         %li
-          %a Videos
+          = link_to "Videos", static_page_path('child_profile_videos')
         
     #info.tab
       .section
         %h6 Basic information
-        %ul
-          %li Gender: Boy
-          %li Birthday: 15.07.2006
-          %li Age: 3
-          %li Location: Bangalore
-          %li School: BlueBells
-          %li Likes: Cricket, soccer
-          %li Family religion: Hindu
+        %dl.basic
+          %dt Gender: 
+          %dd Boy
+          %dt Birthday: 
+          %dd 15.07.2006
+          %dt Age: 
+          %dd 3
+          %dt Location: 
+          %dd Bangalore
+        %dl.basic
+          %dt School: 
+          %dd BlueBells
+          %dt Likes: 
+          %dd Cricket, soccer
+          %dt Family religion: 
+          %dd Hindu
       
       .section  
         %h6 Biography
@@ -46,10 +54,10 @@
           %li= image_tag("image3.jpg", :alt => "Featured child")
           %li= image_tag("image3.jpg", :alt => "Featured child")
           %li= image_tag("image3.jpg", :alt => "Featured child")
-          %li= image_tag("image3.jpg", :alt => "Featured child")
       
       .section
         %a.right view more videos
         %h6 Featured video
+        <object width="580" height="460"><param name="movie" value="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="580" height="460"></embed></object>
         
       
