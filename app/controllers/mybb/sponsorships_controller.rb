@@ -1,8 +1,16 @@
 class Mybb::SponsorshipsController < InheritedResources::Base
 
   #actions :index, :show, :new, :edit, :create, :update, :destroy
-  actions :create, :index
+  actions :create, :destroy
   respond_to :html, :js, :xml, :json
+
+  def create
+    create!(:notice => "") { mybb_sponsorships_amounts_url } #redirect to index action
+  end
+
+  def destroy
+    destroy! { edit_mybb_sponsorships_amounts_url } #redirect to index action
+  end
 
   protected
 
