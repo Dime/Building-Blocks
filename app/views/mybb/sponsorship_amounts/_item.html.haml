@@ -7,3 +7,6 @@
   %td.cost
     %p Your amount
     = select_tag "sponsorship_amounts[#{resource.id}][amount]", options_for_select(Sponsorship::AMOUNTS)
+  //remove_edited
+  %td.actions
+    = link_to 'X remove', mybb_sponsorship_path(resource), :confirm => 'Are you sure you want to remove this sponsorship?', :method => :delete
