@@ -1,6 +1,6 @@
 #step1
   = render :partial => 'shared/steps'
-  #main
+  .main
     = image_tag @child.album.cover_thumb(228), :alt => "Child"
     .text
       %h1= "Sponsor #{@child.first_name}"
@@ -18,7 +18,7 @@
         - form.buttons do
           = form.commit_button 'Sponsor Now'
 
-  #sidebar
+  .sidebar
     .form1
       %h6 Start a new search
       %ul

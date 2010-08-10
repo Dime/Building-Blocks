@@ -1,0 +1,27 @@
+.sidebar
+  = image_tag("image2.png", :alt => "Featured child")
+  
+.main
+  %h4 Some School
+  #tabs
+    %ul 
+      %li
+        = link_to "Info", static_page_path('school_profile')
+      %li
+        = link_to "Images", static_page_path('school_profile_gallery')
+      %li
+        = link_to "Videos", static_page_path('school_profile_videos')
+
+  #info.tab
+    .section
+      %h6 Basic information
+      %dl.basic
+        %dt Description:
+        %dd Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Cum quam euismod sem, semper ut potenti pellentesque quisque.
+      %dl.basic
+        %dt Principal: 
+        %dd Reuben Ambat
+        %dt Date opened: 
+        %dd 24 april 2010
+        %dt No. of students: 
+        %dd 60

@@ -1,0 +1,35 @@
+#schools
+  .sidebar
+    = image_tag("image2.png", :alt => "Featured child")
+    %ul
+      %li.left
+        %a View photos
+        %a View videos
+      %li.right
+        %a Contact
+
+  .main
+    %h4 Some School
+    #tabs
+      %ul 
+        %li
+          = link_to "Info", static_page_path('school_profile')
+        %li
+          = link_to "Images", static_page_path('school_profile_gallery')
+        %li
+          = link_to "Videos", static_page_path('school_profile_videos')
+        %li#active
+          = link_to "Contact", static_page_path('school_profile_contact')
+        
+    #info.tab
+      .section
+        %h6 Contact
+        %dl.basic
+          %dt Phone: 
+          %dd +1231312312321
+          %dt Address
+          %dd 123 ABC Street
+          %dd Suburb A
+          %dd Bangalore, 12345, India
+          %dt Map
+          %dd http://maps.google.com/maps/place?cid=9779582622939501507&q=building+blocks+bangalore&hl=en&cd=1&ei=p93TS7LlJYupkAWHn6ipAw&sig2=8u6WznwsSe1njMhKxvqSCw&sll=12.955146,77.66947&sspn=0.169028,0.207349&ie=UTF8&ll=13.086835,77.519188&spn=0,0&z=12&iwloc=A

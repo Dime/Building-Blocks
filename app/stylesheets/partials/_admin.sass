@@ -1,6 +1,6 @@
-#full-profile
+#full-profile, #schools
   
-  #sidebar
+  .sidebar
     background= image_url("bg-thumb2.png") "no-repeat"
     margin-top: 20px
     img
@@ -23,7 +23,7 @@
       padding: 0 40px 5px 0
       font-family: Palatino, Georgia, "Times New Roman", Times, serif
 
-  #main
+  .main
     padding-top: 50px
     background= image_url("header3.png") "no-repeat top"
     margin-bottom: 40px
@@ -104,3 +104,21 @@
           border: 4px #eee solid
           &:hover
             border: 4px #ddd solid
+            
+#schools
+  overflow: hidden
+  li
+    margin: 0
+    list-style-type: none
+    
+  .main .section dl.basic
+    width: 600px
+    dt
+      float: left
+    dd
+      padding-left: 100px
+    dt, dd
+      margin-bottom: 10px
+      
+  .sidebar li
+    margin: 0

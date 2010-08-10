@@ -1,49 +1,39 @@
-#full-profile
+#schools
   .sidebar
     = image_tag("image2.png", :alt => "Featured child")
     %ul
       %li.left
         %a View photos
-      %li.right
         %a View videos
-    %p Dear Frank,
-    %p Your €30 monthly sponsorship of Akash Gurav benefits his entire community. Thank you for being a part of it!
+      %li.right
+        %a Contact
 
   .main
-    %h4 Akash Gustav
+    %h4 Some School
     #tabs
       %ul 
         %li#active
-          = link_to "Info", static_page_path('child_profile')
+          = link_to "Info", static_page_path('school_profile')
         %li
-          = link_to "Images", static_page_path('child_profile_gallery')
+          = link_to "Images", static_page_path('school_profile_gallery')
         %li
-          = link_to "Videos", static_page_path('child_profile_videos')
+          = link_to "Videos", static_page_path('school_profile_videos')
+        %li
+          = link_to "Contact", static_page_path('school_profile_contact')
         
     #info.tab
       .section
         %h6 Basic information
         %dl.basic
-          %dt Gender: 
-          %dd Boy
-          %dt Birthday: 
-          %dd 15.07.2006
-          %dt Age: 
-          %dd 3
-          %dt Location: 
-          %dd Bangalore
-        %dl.basic
-          %dt School: 
-          %dd BlueBells
-          %dt Likes: 
-          %dd Cricket, soccer
-          %dt Family religion: 
-          %dd Hindu
-      
-      .section  
-        %h6 Biography
-        %p Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Cum quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet tellus vivamus, dictum adipiscing convallis magna id. Viverra eu amet sit, dignissim tincidunt volutpat nulla tincidunt, feugiat est.
-      
+          %dt Description: 
+          %dd Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Cum quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet tellus vivamus, dictum adipiscing convallis magna id. Viverra eu amet sit, dignissim tincidunt volutpat nulla tincidunt, feugiat est.
+          %dt Principal
+          %dd Reuben Ambat
+          %dt Date opened
+          %dd 24 april 2010
+          %dt No. of students
+          %dd 60
+          
       .section
         %a.right view more photos
         %h6 Photo album
@@ -57,7 +47,6 @@
       
       .section
         %a.right view more videos
-        %h6 Featured video
+        %h6 Showreel
         <object width="580" height="460"><param name="movie" value="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/6riY-103vbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="580" height="460"></embed></object>
         
-      
