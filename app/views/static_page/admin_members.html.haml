@@ -1,0 +1,66 @@
+#admin
+  %ul.tabs
+    %li#active= link_to "Members", static_page_path('admin_members')
+    %li= link_to "Schools", static_page_path('admin_schools')
+    %li= link_to "Children", static_page_path('admin_children')
+  #spreadsheet
+    #action
+      %button Add a new member
+    #sort
+      %select{:title => 'something'}
+        %option show by name
+      %select
+        %option show by status
+      %select
+        %option show by sponsoring
+      %select
+        %option show by total donations
+      %button Submit
+    %ul.five-col
+      %li.names
+        %ul
+          %li Name
+          %li E-mail
+          %li Status
+          %li Sponsoring
+          %li Total Donations
+      %li.odd
+        %ul
+          %li something
+          %li something
+          %li something
+          %li something
+          %li something
+      %li.even
+        %ul
+          %li something
+          %li something
+          %li something
+          %li something
+          %li something
+      %li.odd
+        %ul
+          %li something
+          %li something
+          %li something
+          %li something
+          %li something
+      %li.even
+        %ul
+          %li something
+          %li something
+          %li something
+          %li something
+          %li something
+    #pagination
+      .left
+        %p 1 of 5
+      .right
+        %ul
+          %li= link_to "Previous"
+          %li= link_to "1"
+          %li#active= link_to "2"
+          %li= link_to "3"
+          %li= link_to "4"
+          %li= link_to "5"
+          %li= link_to "next"

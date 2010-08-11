@@ -122,3 +122,104 @@
       
   .sidebar li
     margin: 0
+    
+
+#admin
+  margin-bottom: 30px
+
+  ul.tabs
+    +horizontal-list
+
+    li
+      margin: 0
+      padding: 0 1px 0 0
+      &.first a
+        +border-top-left-radius
+      &#active a
+        background: white
+        color: #333
+        font-weight: bold
+      a
+        background: #eee
+        color: #999
+        display: block
+        font-size: 0.9em
+        font-weight: bold
+        padding: 10px 15px 7px 15px
+        text-decoration: none
+        text-transform: uppercase
+        +border-top-radius
+        &:hover
+          color: #333
+          font-weight: bold
+  
+  #spreadsheet
+    background: white
+    padding: 10px
+    +border-bottom-radius
+    +border-top-right-radius
+    
+    ul
+      list-style-type: none
+      
+    ul, li
+      margin: 0
+      padding: 0
+      
+    #action
+      float: right
+      padding-bottom: 10px
+  
+    ul.five-col, ul.four-col, ul#children, ul#schools
+      clear: both
+      overflow: hidden
+      li
+
+        display: inline
+        float: left
+
+
+    ul.five-col, ul.four-col
+      li
+        padding: 0
+        width: 100%
+        &.names
+          background: #999
+          color: white
+        &.odd
+          background: #f9f9f9
+        &.even
+          background: #eee
+          
+        li
+          border-bottom: 1px solid white
+          border-right: 1px solid white
+          padding: 5px
+          
+    ul.five-col li li
+      width: 177px
+      
+    ul.four-col li li
+      width: 224px
+          
+    #pagination
+      overflow: hidden
+      padding-top: 10px
+      .left
+        background: #eee
+        //border: 1px #ddd solid
+        padding: 0 5px
+      .right ul
+        +horizontal-list
+        li 
+          a
+            background: #eee
+            //border: 1px #ddd solid
+            display: block
+            padding: 0 5px
+            text-decoration: none
+            
+          &#active a, &:hover a
+            //border: 1px solid #999
+            background: #999
+            color: white
