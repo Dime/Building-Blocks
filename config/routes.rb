@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.static_page ':page',
     :controller => 'static_page',
     :action => 'show',
-    :page => Regexp.new(%w[about contact sponsorship child_profile child_profile_gallery child_profile_videos schools_index school_profile school_profile_gallery school_profile_videos school_profile_contact admin_members admin_schools admin_children].join('|'))
+    :page => Regexp.new(%w[about contact sponsorship child_profile child_profile_gallery child_profile_videos schools_index school_profile school_profile_gallery school_profile_videos school_profile_contact admin_members admin_schools admin_schools_edit admin_children].join('|'))
 
   map.root :controller => 'home', :action => 'index' # a replacement for public/index.html, with unique layout
 

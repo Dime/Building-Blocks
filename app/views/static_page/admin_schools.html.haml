@@ -7,15 +7,16 @@
     #action
       %button Create a new school
     #sort
-      %select{:title => 'something'}
-        %option show by name
-      %select
-        %option show by principal
-      %select
-        %option show by date
-      %select
-        %option show by students
-      %button Submit
+      %form
+        %select.styled
+          %option show by name
+        %select.styled
+          %option show by principal
+        %select.styled
+          %option show by date
+        %select.styled
+          %option show by students
+        %button Submit
     %ul.four-col
       %li.names
         %ul
@@ -53,3 +54,14 @@
           %li something
 
     #pagination
+      .left
+        %p 1 of 5
+      .right
+        %ul
+          %li= link_to "Previous"
+          %li= link_to "1"
+          %li#active= link_to "2"
+          %li= link_to "3"
+          %li= link_to "4"
+          %li= link_to "5"
+          %li= link_to "next"

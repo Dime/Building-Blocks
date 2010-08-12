@@ -7,15 +7,16 @@
     #action
       %button Add a new member
     #sort
-      %select{:title => 'something'}
-        %option show by name
-      %select
-        %option show by status
-      %select
-        %option show by sponsoring
-      %select
-        %option show by total donations
-      %button Submit
+      %form
+        %select.styled
+          %option show by name
+        %select.styled
+          %option show by status
+        %select.styled
+          %option show by sponsoring
+        %select.styled
+          %option show by donations
+        %button Submit
     %ul.five-col
       %li.names
         %ul

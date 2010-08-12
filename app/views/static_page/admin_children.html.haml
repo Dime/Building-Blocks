@@ -7,15 +7,16 @@
     #action
       %button Add a new child
     #sort
-      %select{:title => 'something'}
-        %option show by name
-      %select
-        %option show by school
-      %select
-        %option show by age
-      %select
-        %option show by gender
-      %button Submit
+      %form
+        %select.styled
+          %option show by name
+        %select.styled
+          %option show by school
+        %select.styled
+          %option show by age
+        %select.styled
+          %option show by gender
+        %button Submit
     %ul.five-col
       %li.names
         %ul
@@ -53,3 +54,14 @@
           %li something
           %li something
     #pagination
+      .left
+        %p 1 of 5
+      .right
+        %ul
+          %li= link_to "Previous"
+          %li= link_to "1"
+          %li#active= link_to "2"
+          %li= link_to "3"
+          %li= link_to "4"
+          %li= link_to "5"
+          %li= link_to "next"

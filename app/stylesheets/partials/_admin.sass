@@ -137,7 +137,7 @@
         +border-top-left-radius
       &#active a
         background: white
-        color: #333
+        color: !blue
         font-weight: bold
       a
         background: #eee
@@ -150,15 +150,17 @@
         text-transform: uppercase
         +border-top-radius
         &:hover
-          color: #333
+          color: !blue
           font-weight: bold
   
   #spreadsheet
     background: white
+    overflow: hidden
     padding: 10px
     +border-bottom-radius
     +border-top-right-radius
     
+
     ul
       list-style-type: none
       
@@ -169,6 +171,53 @@
     #action
       float: right
       padding-bottom: 10px
+      
+    #edit
+      padding: 0 15px 25px 15px
+      h6
+        padding: 40px 0 20px 0
+      p
+        color: #666
+        padding-bottom: 20px
+        span
+          color: #999
+          display: block
+          font-size: 0.8em
+          letter-spacing: 0.05em
+          padding-left: 105px
+      label
+        color: #333
+        display: inline-block
+        vertical-align: top
+        width: 100px
+      input, textarea
+        border: 1px #ccc solid
+        font-size: 1.2em
+        margin-bottom: 3px
+        padding: 5px
+        +rounded
+      img
+
+    
+    .right#edit h6
+      padding-top: 3px
+    
+    #sort
+      padding-bottom: 10px
+      
+    button
+      background: #eee
+      border: none
+      padding: 5px
+      +rounded
+      &:hover
+        background: !yellow
+        color: white
+    button
+      color: !blue
+      cursor: pointer
+      font-weight: bold
+      text-transform: uppercase
   
     ul.five-col, ul.four-col, ul#children, ul#schools
       clear: both
@@ -180,16 +229,22 @@
 
 
     ul.five-col, ul.four-col
+
       li
         padding: 0
         width: 100%
         &.names
-          background: #999
+          background: !blue
           color: white
+          +rounded-top
         &.odd
           background: #f9f9f9
+          &:hover
+            background: #eee
         &.even
-          background: #eee
+          background: #f3f3f3
+          &:hover
+            background: #eee
           
         li
           border-bottom: 1px solid white

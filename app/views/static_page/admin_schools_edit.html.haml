@@ -1,0 +1,55 @@
+#admin
+  %ul.tabs
+    %li#active= link_to "Info", static_page_path('admin_members')
+    %li= link_to "Videos", static_page_path('admin_children')
+  #spreadsheet
+    #action
+      %button Back to list of schools
+    #edit.left
+      %h6 Basic information
+      %form{:method => "post"}
+        %p
+          %label Name
+          %input{:type=>'text', :size => 30}
+          %span Enter the school name
+        %p
+          %label Principal
+          %input{:type=>'text', :size => 30}
+          %span Enter the school principal name
+        %p
+          %label Date Open
+          %input{:type=>'text', :size => 30}
+          %span Choose the opening date
+        %p
+          %label Description
+          %textarea{ :rows => 4, :cols => 31}    
+          %span Provide basic information about the school
+      
+      %h6 Contact Information
+      %form{:method => "post"}
+        %p
+          %label Telephone
+          %input{:type=>'text', :size => 30}
+          %span Enter the school telephone number
+        %p
+          %label Address
+          %input{:type=>'text', :size => 30}
+          %span Enter the school address
+        %p
+          %label Google Map
+          %img
+          %textarea{ :rows => 4, :cols => 31} 
+          %span Enter the Google Maps embed code
+          
+    .right#edit
+      %h6 Image
+      %form
+        %p
+          %label Main image
+          = image_tag("image3.jpg")
+          %span Defaults to the Album cover of the selected Picasa Album
+          
+        %p
+          %label Picasa URL
+          %input{:type=>'text', :size => 30}
+          %span Enter the Picasa album URL
